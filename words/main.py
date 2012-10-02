@@ -1,6 +1,7 @@
 import os
 from tree import WordTree
 import pygame
+from board import Board
 from pygame.locals import *
 
 
@@ -43,6 +44,8 @@ def main():
     allsprites = pygame.sprite.RenderPlain(sprite)
     clock = pygame.time.Clock()
 
+    board = Board()
+
     while 1:
         clock.tick(60)
 
@@ -65,7 +68,7 @@ def main():
 
     #Draw Everything
         screen.blit(background, (0, 0))
-        allsprites.draw(screen)
+        board.draw(screen)
         pygame.display.flip()
 
 
