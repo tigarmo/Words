@@ -64,8 +64,6 @@ def createPiece(letter, tilesheet, index):
 class Board:
     def __init__(self):
         self.tilesheet = loadImage('scrabble.jpg',-1)[0]
-        self.piece_a   = createPiece('z', self.tilesheet, (3,0))
-        self.allsprites = pygame.sprite.RenderPlain(self.piece_a)
         self.letters = {
                     'a': createPiece('a', self.tilesheet, (5,9)),
                     'b': createPiece('b', self.tilesheet, (173,9)),
