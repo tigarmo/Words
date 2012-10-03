@@ -56,13 +56,7 @@ def main():
             elif event.type == KEYDOWN and event.key == K_ESCAPE:
                 return
             elif event.type == MOUSEBUTTONDOWN:
-                if fist.punch(chimp):
-                    punch_sound.play() #punch
-                    chimp.punched()
-                else:
-                    whiff_sound.play() #miss
-            elif event.type is MOUSEBUTTONUP:
-                fist.unpunch()
+                board.nextLetter()
 
         sprite.update()
 
